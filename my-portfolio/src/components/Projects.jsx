@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -37,37 +38,67 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project }) => (
-  <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-    <div className="p-4">
-      <h3 className="text-gray-700 font-bold text-xl mb-2">{project.title}</h3>
-      <p className="text-gray-700 text-base font-mono mb-4">{project.description}</p>
-    </div>
-    <div className="px-4 pb-4">
+const ProjectCard = ({ project }) => {
+  const ref = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.transform = `perspective(700px) rotateX(${(-y * 8).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) translateY(-4px)`;
+  };
+
+  const reset = () => {
+    if (ref.current) ref.current.style.transform = "";
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={reset}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 },
+      }}
+      className="flex flex-col justify-between rounded-lg border border-white/10 bg-white/5 p-5 transition-[transform,border-color,box-shadow] duration-200 will-change-transform hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10"
+    >
+      <div>
+        <h3 className="mb-2 text-xl font-bold text-white">{project.title}</h3>
+        <p className="mb-4 font-mono text-sm text-gray-400">{project.description}</p>
+      </div>
       {project.githubLink && (
-        <a 
-          href={project.githubLink} 
-          target="_blank" 
+        <a
+          href={project.githubLink}
+          target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300 transition duration-300"
+          className="inline-block w-fit rounded-full bg-white/10 px-3 py-1 text-sm font-semibold text-gray-200 transition duration-300 hover:bg-blue-500 hover:text-white"
         >
           GitHub
         </a>
       )}
-    </div>
-  </div>
-);
+    </motion.div>
+  );
+};
 
 const Projects = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-6">My Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section id="projects" className="mb-20 scroll-mt-24 py-8">
+      <h2 className="mb-6 text-3xl font-bold">My Projects</h2>
+      <motion.div
+        className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        variants={{ show: { transition: { staggerChildren: 0.08 } } }}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 };
 
