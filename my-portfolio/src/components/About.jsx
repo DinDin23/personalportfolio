@@ -28,7 +28,7 @@ const About = () => {
             <h2 className="py-2 font-mono text-4xl">Dinesh Polisetty</h2>
 
             <p className="font-mono text-xl text-gray-300">
-                I build <Typewriter phrases={["AI agents", "distributed systems", "developer tools", "fintech infra"]} />
+                I build <Typewriter phrases={["AI agents", "developer tools", "fintech infra"]} />
             </p>
 
             <div className="flex items-center py-6">
