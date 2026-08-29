@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Cycles through phrases with a type / pause / delete rhythm.
 const Typewriter = ({

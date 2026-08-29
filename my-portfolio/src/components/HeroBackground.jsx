@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 // Lightweight canvas constellation: drifting points connected by lines,
 // with a soft pull toward the cursor. Purely decorative.
