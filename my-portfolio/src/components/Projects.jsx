@@ -3,38 +3,36 @@ import React from 'react';
 const projects = [
   {
     id: 1,
-    title: "Audiscribe",
-    description: "Podcast Chapter Title Generator built with a trained LDA model on 1500+ episodes",
-    githubLink: "https://github.com/DinDin23/YouTubeTimeStampGeneration"
+    title: "Karmine",
+    description: "A peer-to-peer wagering platform for Clash Royale: players stake money, get matched, and the app settles the bet automatically by polling the Clash Royale API. FastAPI + React.",
+    githubLink: "https://github.com/DinDin23/Karmine"
   },
   {
     id: 2,
-    title: "ChessEval",
-    description: "iOS app that can evaluate pictures of chess games and predict the next best move",
-    githubLink: "https://github.com/DinDin23/carpet"
+    title: "Phoenix",
+    description: "A CLI that scans a codebase and builds a structured map of every third-party API integration point, with optional LLM-assisted analysis.",
+    githubLink: "https://github.com/DinDin23/Phoenix"
   },
   {
     id: 3,
-    title: "BWI-Language",
-    description: "A custom language built for BWIBots to understand/follow English directions",
-    githubLink: "https://github.com/DinDin23/FRI1Project"
+    title: "NBA Arbitrage Finder",
+    description: "A Python engine that detects arbitrage opportunities across sportsbooks by comparing implied probabilities and computing optimal bet sizing.",
   },
   {
     id: 4,
-    title: "Parallel Lyrics",
-    description: "A web app that allow users to search for songs containing a particular lyric",
-    githubLink: "https://github.com/DinDin23/ParallelLyrics"
+    title: "Apartment Monitor",
+    description: "A Playwright scraper that watches Manhattan apartment listings for units under a price threshold and texts me the moment one appears.",
   },
   {
     id: 5,
-    title: "Quotables",
-    description: "iOS app to keep track of loved one quotes and share those quotes with others",
-    githubLink: "https://github.com/DinDin23/Quotables"
+    title: "Audiscribe",
+    description: "Podcast chapter title generator built with an LDA topic model trained on 1500+ episodes.",
+    githubLink: "https://github.com/DinDin23/YouTubeTimeStampGeneration"
   },
   {
     id: 6,
     title: "Spotify Song Popularity Predictor",
-    description: "An ensemble model that predicts if a song charts on Spotify",
+    description: "An ensemble model that predicts whether a song will chart on Spotify.",
     githubLink: "https://github.com/DinDin23/Spotify-Songs-Suggestion-Model"
   },
 ];

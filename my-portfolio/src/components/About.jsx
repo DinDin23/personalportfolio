@@ -41,10 +41,12 @@ const About = () => {
             
             <div className=" text-white font-mono p-4 rounded-md flex items-center space-x-4 text-2xl">
             <span >
-                Hello, I'm computer science student at UT Austin with a minor in business and a certificate in applied 
-                statistic modeling! My academic interests lie in the fields of large-scale distributed systems, machine learning,
-                and fintech. I'm passionate about leveraging technology to solve real-world problems and making people's lives easier.
-                Outside of school, I enjoy tinkering with Spot dogs, basketball, and competitive Catan!
+                Hello, I'm a software engineer at Meta in NYC, where I build AI agents and custom MCP tooling to automate
+                change management workflows for Meta's compliance platform. I graduated from UT Austin in 2025 with a
+                B.S. in Computer Science and a minor in Business. Before Meta I interned at J.P. Morgan Chase on the
+                Payments and Securities Services teams, and at York Space Systems writing C++ for satellite thruster
+                control. My interests lie in large-scale distributed systems, machine learning, and fintech. Outside of
+                work, you'll find me playing basketball, competitive Catan, or poker.
             </span>
             
             </div>
