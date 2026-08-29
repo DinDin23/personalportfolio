@@ -41,11 +41,10 @@ const About = () => {
             
             <div className=" text-white font-mono p-4 rounded-md flex items-center space-x-4 text-2xl">
             <span >
-                Hello, I'm a software engineer at Meta in NYC, where I build AI agents and custom MCP tooling to automate
-                change management workflows for Meta's compliance platform. I graduated from UT Austin in 2025 with a
+                Hello! I'm a software engineer at Meta in NYC, where I build AI agents. I graduated from UT Austin in 2025 with a
                 B.S. in Computer Science and a minor in Business. Before Meta I interned at J.P. Morgan Chase on the
                 Payments and Securities Services teams, and at York Space Systems writing C++ for satellite thruster
-                control. My interests lie in large-scale distributed systems, machine learning, and fintech. Outside of
+                control. Outside of
                 work, you'll find me playing basketball, competitive Catan, or poker.
             </span>
             
